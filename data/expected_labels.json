@@ -1,0 +1,100 @@
+{
+  "bundle_01_valid_approved_rev": {
+    "split": "dev",
+    "expected_status": "PASS",
+    "case_type": "valid_approved_change",
+    "model_mode": "normal",
+    "bundle_path": "data/bundles/dev/bundle_01_valid_approved_rev.json"
+  },
+  "bundle_02_valid_unusual_formulation": {
+    "split": "dev",
+    "expected_status": "PASS",
+    "case_type": "valid_unusual_formulation",
+    "model_mode": "normal",
+    "bundle_path": "data/bundles/dev/bundle_02_valid_unusual_formulation.json"
+  },
+  "bundle_03_valid_paired_renamed_reordered": {
+    "split": "dev",
+    "expected_status": "PASS",
+    "case_type": "valid_paired_invariant",
+    "model_mode": "normal",
+    "bundle_path": "data/bundles/dev/bundle_03_valid_paired_renamed_reordered.json"
+  },
+  "bundle_04_defect_omitted_req": {
+    "split": "dev",
+    "expected_status": "CHANGES_REQUIRED",
+    "case_type": "defect_omitted_requirement",
+    "model_mode": "normal",
+    "bundle_path": "data/bundles/dev/bundle_04_defect_omitted_req.json"
+  },
+  "bundle_05_defect_boundary_and_unit": {
+    "split": "dev",
+    "expected_status": "CHANGES_REQUIRED",
+    "case_type": "defect_boundary_unit",
+    "model_mode": "normal",
+    "bundle_path": "data/bundles/dev/bundle_05_defect_boundary_and_unit.json"
+  },
+  "bundle_06_defect_precedence_interaction": {
+    "split": "dev",
+    "expected_status": "CHANGES_REQUIRED",
+    "case_type": "defect_precedence",
+    "model_mode": "normal",
+    "bundle_path": "data/bundles/dev/bundle_06_defect_precedence_interaction.json"
+  },
+  "bundle_07_defect_code_disagreement": {
+    "split": "dev",
+    "expected_status": "CHANGES_REQUIRED",
+    "case_type": "defect_code_disagreement",
+    "model_mode": "normal",
+    "bundle_path": "data/bundles/dev/bundle_07_defect_code_disagreement.json"
+  },
+  "bundle_08_defect_paired_behavior_change": {
+    "split": "dev",
+    "expected_status": "CHANGES_REQUIRED",
+    "case_type": "defect_paired_behavior_change",
+    "model_mode": "normal",
+    "bundle_path": "data/bundles/dev/bundle_08_defect_paired_behavior_change.json"
+  },
+  "bundle_09_incomplete_approval_conflict": {
+    "split": "dev",
+    "expected_status": "INCOMPLETE",
+    "case_type": "incomplete_approval_conflict",
+    "model_mode": "normal",
+    "bundle_path": "data/bundles/dev/bundle_09_incomplete_approval_conflict.json"
+  },
+  "bundle_10_incomplete_unsupported_python": {
+    "split": "dev",
+    "expected_status": "INCOMPLETE",
+    "case_type": "incomplete_unsupported_python",
+    "model_mode": "normal",
+    "bundle_path": "data/bundles/dev/bundle_10_incomplete_unsupported_python.json"
+  },
+  "bundle_11_heldout_valid_nested_exception": {
+    "split": "heldout",
+    "expected_status": "PASS",
+    "case_type": "heldout_valid_nested",
+    "model_mode": "normal",
+    "bundle_path": "data/bundles/heldout/bundle_11_heldout_valid_nested_exception.json"
+  },
+  "bundle_12_heldout_defect_injection_missing_branch": {
+    "split": "heldout",
+    "expected_status": "CHANGES_REQUIRED",
+    "case_type": "heldout_defect_injection_branch",
+    "model_mode": "normal",
+    "bundle_path": "data/bundles/heldout/bundle_12_heldout_defect_injection_missing_branch.json"
+  },
+  "bundle_13_heldout_defect_unapproved_applied": {
+    "split": "heldout",
+    "expected_status": "CHANGES_REQUIRED",
+    "case_type": "heldout_defect_unapproved",
+    "model_mode": "normal",
+    "bundle_path": "data/bundles/heldout/bundle_13_heldout_defect_unapproved_applied.json"
+  },
+  "bundle_14_heldout_incomplete_model_failure": {
+    "split": "heldout",
+    "expected_status": "INCOMPLETE",
+    "case_type": "heldout_incomplete_model_failure",
+    "model_mode": "timeout",
+    "bundle_path": "data/bundles/heldout/bundle_14_heldout_incomplete_model_failure.json"
+  }
+}

@@ -1,0 +1,16 @@
+test_cache_invalidation_on_approval_change (test_reviewer.TestWorkflowReviewer) ... ok
+test_deliberate_fault_injection_empty_string_missing (test_reviewer.TestWorkflowReviewer)
+Deliberate Fault Injection: empty string category='' must behave identically to None. ... ok
+test_dsl_units_and_missing (test_reviewer.TestWorkflowReviewer) ... ok
+test_full_14_bundle_evaluation_and_finding_quality (test_reviewer.TestWorkflowReviewer) ... ok
+test_model_failures_and_trust (test_reviewer.TestWorkflowReviewer) ... ok
+test_regression_debug_ex1_not_equal_missing (test_reviewer.TestWorkflowReviewer)
+Real Bug Regression: bundle_11_heldout_valid_nested_exception must PASS. ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.027s
+
+OK
+[checkpoint_v0] exact=7/14 heldout=2/4 false_passes=3/7 false_blocks=3/4 incomplete=2/3 cx=0/7 runtime_ms=0.506
+[ablation_no_exhaustive_equiv] exact=8/14 heldout=2/4 false_passes=6/7 false_blocks=0/4 incomplete=3/3 cx=0/7 runtime_ms=3.858
+[final] exact=14/14 heldout=4/4 false_passes=0/7 false_blocks=0/4 incomplete=3/3 cx=7/7 runtime_ms=10.265

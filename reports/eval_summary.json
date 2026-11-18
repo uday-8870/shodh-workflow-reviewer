@@ -1,0 +1,552 @@
+{
+  "note": "All model checks in offline eval use LocalFakeModelClient (synthetic); live real-model performance was not measured. Held-out set has 4 bundles (1 valid, 2 defective, 1 incomplete).",
+  "dataset_breakdown": {
+    "total": 14,
+    "valid_pass": {
+      "total": 4,
+      "dev": 3,
+      "heldout": 1
+    },
+    "defective_changes_required": {
+      "total": 7,
+      "dev": 5,
+      "heldout": 2
+    },
+    "incomplete": {
+      "total": 3,
+      "dev": 2,
+      "heldout": 1
+    }
+  },
+  "checkpoint_v0": {
+    "mode": "checkpoint_v0",
+    "client_type": "none (v0)",
+    "total_bundles": 14,
+    "exact_accuracy": "7/14",
+    "heldout_accuracy": "2/4",
+    "false_passes_on_defective": "3/7",
+    "false_blocks_on_valid": "3/4",
+    "incomplete_correct": "2/3",
+    "finding_quality": {
+      "defective_with_counterexample": "0/7",
+      "defective_with_evidence_and_location": "4/7",
+      "defective_with_correction": "4/7",
+      "unsupported_or_invented_findings": 0
+    },
+    "resource_use": {
+      "total_runtime_ms": 0.479,
+      "model_calls": 0,
+      "retries": 0
+    },
+    "per_bundle": [
+      {
+        "bundle_id": "bundle_01_valid_approved_rev",
+        "split": "dev",
+        "case_type": "valid_approved_change",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true,
+        "finding_count": 0,
+        "has_counterexample": false,
+        "runtime_ms": 0.065
+      },
+      {
+        "bundle_id": "bundle_02_valid_unusual_formulation",
+        "split": "dev",
+        "case_type": "valid_unusual_formulation",
+        "expected": "PASS",
+        "actual": "CHANGES_REQUIRED",
+        "correct": false,
+        "finding_count": 3,
+        "has_counterexample": false,
+        "runtime_ms": 0.052
+      },
+      {
+        "bundle_id": "bundle_03_valid_paired_renamed_reordered",
+        "split": "dev",
+        "case_type": "valid_paired_invariant",
+        "expected": "PASS",
+        "actual": "CHANGES_REQUIRED",
+        "correct": false,
+        "finding_count": 1,
+        "has_counterexample": false,
+        "runtime_ms": 0.043
+      },
+      {
+        "bundle_id": "bundle_04_defect_omitted_req",
+        "split": "dev",
+        "case_type": "defect_omitted_requirement",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "CHANGES_REQUIRED",
+        "correct": true,
+        "finding_count": 1,
+        "has_counterexample": false,
+        "runtime_ms": 0.042
+      },
+      {
+        "bundle_id": "bundle_05_defect_boundary_and_unit",
+        "split": "dev",
+        "case_type": "defect_boundary_unit",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "CHANGES_REQUIRED",
+        "correct": true,
+        "finding_count": 1,
+        "has_counterexample": false,
+        "runtime_ms": 0.041
+      },
+      {
+        "bundle_id": "bundle_06_defect_precedence_interaction",
+        "split": "dev",
+        "case_type": "defect_precedence",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "PASS",
+        "correct": false,
+        "finding_count": 0,
+        "has_counterexample": false,
+        "runtime_ms": 0.039
+      },
+      {
+        "bundle_id": "bundle_07_defect_code_disagreement",
+        "split": "dev",
+        "case_type": "defect_code_disagreement",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "PASS",
+        "correct": false,
+        "finding_count": 0,
+        "has_counterexample": false,
+        "runtime_ms": 0.04
+      },
+      {
+        "bundle_id": "bundle_08_defect_paired_behavior_change",
+        "split": "dev",
+        "case_type": "defect_paired_behavior_change",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "CHANGES_REQUIRED",
+        "correct": true,
+        "finding_count": 1,
+        "has_counterexample": false,
+        "runtime_ms": 0.044
+      },
+      {
+        "bundle_id": "bundle_09_incomplete_approval_conflict",
+        "split": "dev",
+        "case_type": "incomplete_approval_conflict",
+        "expected": "INCOMPLETE",
+        "actual": "CHANGES_REQUIRED",
+        "correct": false,
+        "finding_count": 1,
+        "has_counterexample": false,
+        "runtime_ms": 0.045
+      },
+      {
+        "bundle_id": "bundle_10_incomplete_unsupported_python",
+        "split": "dev",
+        "case_type": "incomplete_unsupported_python",
+        "expected": "INCOMPLETE",
+        "actual": "INCOMPLETE",
+        "correct": true,
+        "finding_count": 0,
+        "has_counterexample": false,
+        "runtime_ms": 0.015
+      },
+      {
+        "bundle_id": "bundle_11_heldout_valid_nested_exception",
+        "split": "heldout",
+        "case_type": "heldout_valid_nested",
+        "expected": "PASS",
+        "actual": "CHANGES_REQUIRED",
+        "correct": false,
+        "finding_count": 1,
+        "has_counterexample": false,
+        "runtime_ms": 0.004
+      },
+      {
+        "bundle_id": "bundle_12_heldout_defect_injection_missing_branch",
+        "split": "heldout",
+        "case_type": "heldout_defect_injection_branch",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "PASS",
+        "correct": false,
+        "finding_count": 0,
+        "has_counterexample": false,
+        "runtime_ms": 0.041
+      },
+      {
+        "bundle_id": "bundle_13_heldout_defect_unapproved_applied",
+        "split": "heldout",
+        "case_type": "heldout_defect_unapproved",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "CHANGES_REQUIRED",
+        "correct": true,
+        "finding_count": 1,
+        "has_counterexample": false,
+        "runtime_ms": 0.005
+      },
+      {
+        "bundle_id": "bundle_14_heldout_incomplete_model_failure",
+        "split": "heldout",
+        "case_type": "heldout_incomplete_model_failure",
+        "expected": "INCOMPLETE",
+        "actual": "INCOMPLETE",
+        "correct": true,
+        "finding_count": 0,
+        "has_counterexample": false,
+        "runtime_ms": 0.003
+      }
+    ]
+  },
+  "ablation_no_exhaustive_equiv": {
+    "mode": "ablation_no_exhaustive_equiv",
+    "client_type": "LocalFakeModelClient (synthetic)",
+    "total_bundles": 14,
+    "exact_accuracy": "8/14",
+    "heldout_accuracy": "2/4",
+    "false_passes_on_defective": "6/7",
+    "false_blocks_on_valid": "0/4",
+    "incomplete_correct": "3/3",
+    "finding_quality": {
+      "defective_with_counterexample": "0/7",
+      "defective_with_evidence_and_location": "4/7",
+      "defective_with_correction": "4/7",
+      "unsupported_or_invented_findings": 0
+    },
+    "resource_use": {
+      "total_runtime_ms": 3.789,
+      "model_calls": 3,
+      "retries": 2
+    },
+    "per_bundle": [
+      {
+        "bundle_id": "bundle_01_valid_approved_rev",
+        "split": "dev",
+        "case_type": "valid_approved_change",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true,
+        "finding_count": 0,
+        "has_counterexample": false,
+        "runtime_ms": 0.335
+      },
+      {
+        "bundle_id": "bundle_02_valid_unusual_formulation",
+        "split": "dev",
+        "case_type": "valid_unusual_formulation",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true,
+        "finding_count": 0,
+        "has_counterexample": false,
+        "runtime_ms": 0.295
+      },
+      {
+        "bundle_id": "bundle_03_valid_paired_renamed_reordered",
+        "split": "dev",
+        "case_type": "valid_paired_invariant",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true,
+        "finding_count": 0,
+        "has_counterexample": false,
+        "runtime_ms": 0.328
+      },
+      {
+        "bundle_id": "bundle_04_defect_omitted_req",
+        "split": "dev",
+        "case_type": "defect_omitted_requirement",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "CHANGES_REQUIRED",
+        "correct": true,
+        "finding_count": 1,
+        "has_counterexample": false,
+        "runtime_ms": 0.263
+      },
+      {
+        "bundle_id": "bundle_05_defect_boundary_and_unit",
+        "split": "dev",
+        "case_type": "defect_boundary_unit",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "PASS",
+        "correct": false,
+        "finding_count": 0,
+        "has_counterexample": false,
+        "runtime_ms": 0.283
+      },
+      {
+        "bundle_id": "bundle_06_defect_precedence_interaction",
+        "split": "dev",
+        "case_type": "defect_precedence",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "PASS",
+        "correct": false,
+        "finding_count": 0,
+        "has_counterexample": false,
+        "runtime_ms": 0.286
+      },
+      {
+        "bundle_id": "bundle_07_defect_code_disagreement",
+        "split": "dev",
+        "case_type": "defect_code_disagreement",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "PASS",
+        "correct": false,
+        "finding_count": 1,
+        "has_counterexample": false,
+        "runtime_ms": 0.256
+      },
+      {
+        "bundle_id": "bundle_08_defect_paired_behavior_change",
+        "split": "dev",
+        "case_type": "defect_paired_behavior_change",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "PASS",
+        "correct": false,
+        "finding_count": 0,
+        "has_counterexample": false,
+        "runtime_ms": 0.255
+      },
+      {
+        "bundle_id": "bundle_09_incomplete_approval_conflict",
+        "split": "dev",
+        "case_type": "incomplete_approval_conflict",
+        "expected": "INCOMPLETE",
+        "actual": "INCOMPLETE",
+        "correct": true,
+        "finding_count": 1,
+        "has_counterexample": false,
+        "runtime_ms": 0.297
+      },
+      {
+        "bundle_id": "bundle_10_incomplete_unsupported_python",
+        "split": "dev",
+        "case_type": "incomplete_unsupported_python",
+        "expected": "INCOMPLETE",
+        "actual": "INCOMPLETE",
+        "correct": true,
+        "finding_count": 0,
+        "has_counterexample": false,
+        "runtime_ms": 0.235
+      },
+      {
+        "bundle_id": "bundle_11_heldout_valid_nested_exception",
+        "split": "heldout",
+        "case_type": "heldout_valid_nested",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true,
+        "finding_count": 0,
+        "has_counterexample": false,
+        "runtime_ms": 0.225
+      },
+      {
+        "bundle_id": "bundle_12_heldout_defect_injection_missing_branch",
+        "split": "heldout",
+        "case_type": "heldout_defect_injection_branch",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "PASS",
+        "correct": false,
+        "finding_count": 1,
+        "has_counterexample": false,
+        "runtime_ms": 0.243
+      },
+      {
+        "bundle_id": "bundle_13_heldout_defect_unapproved_applied",
+        "split": "heldout",
+        "case_type": "heldout_defect_unapproved",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "PASS",
+        "correct": false,
+        "finding_count": 1,
+        "has_counterexample": false,
+        "runtime_ms": 0.233
+      },
+      {
+        "bundle_id": "bundle_14_heldout_incomplete_model_failure",
+        "split": "heldout",
+        "case_type": "heldout_incomplete_model_failure",
+        "expected": "INCOMPLETE",
+        "actual": "INCOMPLETE",
+        "correct": true,
+        "finding_count": 1,
+        "has_counterexample": false,
+        "runtime_ms": 0.255
+      }
+    ]
+  },
+  "final": {
+    "mode": "final",
+    "client_type": "LocalFakeModelClient (synthetic)",
+    "total_bundles": 14,
+    "exact_accuracy": "14/14",
+    "heldout_accuracy": "4/4",
+    "false_passes_on_defective": "0/7",
+    "false_blocks_on_valid": "0/4",
+    "incomplete_correct": "3/3",
+    "finding_quality": {
+      "defective_with_counterexample": "7/7",
+      "defective_with_evidence_and_location": "7/7",
+      "defective_with_correction": "7/7",
+      "unsupported_or_invented_findings": 0
+    },
+    "resource_use": {
+      "total_runtime_ms": 10.031,
+      "model_calls": 3,
+      "retries": 2
+    },
+    "per_bundle": [
+      {
+        "bundle_id": "bundle_01_valid_approved_rev",
+        "split": "dev",
+        "case_type": "valid_approved_change",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true,
+        "finding_count": 0,
+        "has_counterexample": false,
+        "runtime_ms": 0.889
+      },
+      {
+        "bundle_id": "bundle_02_valid_unusual_formulation",
+        "split": "dev",
+        "case_type": "valid_unusual_formulation",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true,
+        "finding_count": 0,
+        "has_counterexample": false,
+        "runtime_ms": 0.837
+      },
+      {
+        "bundle_id": "bundle_03_valid_paired_renamed_reordered",
+        "split": "dev",
+        "case_type": "valid_paired_invariant",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true,
+        "finding_count": 0,
+        "has_counterexample": false,
+        "runtime_ms": 0.836
+      },
+      {
+        "bundle_id": "bundle_04_defect_omitted_req",
+        "split": "dev",
+        "case_type": "defect_omitted_requirement",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "CHANGES_REQUIRED",
+        "correct": true,
+        "finding_count": 1,
+        "has_counterexample": true,
+        "runtime_ms": 0.677
+      },
+      {
+        "bundle_id": "bundle_05_defect_boundary_and_unit",
+        "split": "dev",
+        "case_type": "defect_boundary_unit",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "CHANGES_REQUIRED",
+        "correct": true,
+        "finding_count": 2,
+        "has_counterexample": true,
+        "runtime_ms": 0.555
+      },
+      {
+        "bundle_id": "bundle_06_defect_precedence_interaction",
+        "split": "dev",
+        "case_type": "defect_precedence",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "CHANGES_REQUIRED",
+        "correct": true,
+        "finding_count": 1,
+        "has_counterexample": true,
+        "runtime_ms": 0.769
+      },
+      {
+        "bundle_id": "bundle_07_defect_code_disagreement",
+        "split": "dev",
+        "case_type": "defect_code_disagreement",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "CHANGES_REQUIRED",
+        "correct": true,
+        "finding_count": 2,
+        "has_counterexample": true,
+        "runtime_ms": 0.642
+      },
+      {
+        "bundle_id": "bundle_08_defect_paired_behavior_change",
+        "split": "dev",
+        "case_type": "defect_paired_behavior_change",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "CHANGES_REQUIRED",
+        "correct": true,
+        "finding_count": 1,
+        "has_counterexample": true,
+        "runtime_ms": 0.909
+      },
+      {
+        "bundle_id": "bundle_09_incomplete_approval_conflict",
+        "split": "dev",
+        "case_type": "incomplete_approval_conflict",
+        "expected": "INCOMPLETE",
+        "actual": "INCOMPLETE",
+        "correct": true,
+        "finding_count": 4,
+        "has_counterexample": true,
+        "runtime_ms": 0.564
+      },
+      {
+        "bundle_id": "bundle_10_incomplete_unsupported_python",
+        "split": "dev",
+        "case_type": "incomplete_unsupported_python",
+        "expected": "INCOMPLETE",
+        "actual": "INCOMPLETE",
+        "correct": true,
+        "finding_count": 0,
+        "has_counterexample": false,
+        "runtime_ms": 0.523
+      },
+      {
+        "bundle_id": "bundle_11_heldout_valid_nested_exception",
+        "split": "heldout",
+        "case_type": "heldout_valid_nested",
+        "expected": "PASS",
+        "actual": "PASS",
+        "correct": true,
+        "finding_count": 0,
+        "has_counterexample": false,
+        "runtime_ms": 1.248
+      },
+      {
+        "bundle_id": "bundle_12_heldout_defect_injection_missing_branch",
+        "split": "heldout",
+        "case_type": "heldout_defect_injection_branch",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "CHANGES_REQUIRED",
+        "correct": true,
+        "finding_count": 2,
+        "has_counterexample": true,
+        "runtime_ms": 0.679
+      },
+      {
+        "bundle_id": "bundle_13_heldout_defect_unapproved_applied",
+        "split": "heldout",
+        "case_type": "heldout_defect_unapproved",
+        "expected": "CHANGES_REQUIRED",
+        "actual": "CHANGES_REQUIRED",
+        "correct": true,
+        "finding_count": 3,
+        "has_counterexample": true,
+        "runtime_ms": 0.39
+      },
+      {
+        "bundle_id": "bundle_14_heldout_incomplete_model_failure",
+        "split": "heldout",
+        "case_type": "heldout_incomplete_model_failure",
+        "expected": "INCOMPLETE",
+        "actual": "INCOMPLETE",
+        "correct": true,
+        "finding_count": 1,
+        "has_counterexample": false,
+        "runtime_ms": 0.513
+      }
+    ]
+  }
+}
